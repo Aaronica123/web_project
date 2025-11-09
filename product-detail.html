@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JumShop - Product Detail</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- HEADER (same) -->
+  <header class="header">
+    <div class="container">
+      <div class="logo"><h2>JumShop</h2></div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">Menu</div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- PRODUCT DETAIL -->
+  <section class="container" style="margin-top:100px; display:flex; gap:2rem; flex-wrap:wrap;">
+    <div style="flex:1; min-width:300px;">
+      <img src="images/phone.jpg" alt="Smartphone X" id="mainImg" style="width:100%; border-radius:12px; cursor:zoom-in;" onclick="this.style.transform='scale(1.5)'; setTimeout(()=>this.style.transform='scale(1)', 2000);">
+    </div>
+    <div style="flex:1; min-width:300px;">
+      <h1>Smartphone X</h1>
+      <p class="price" style="font-size:2rem; color:#ff6b00;">$299</p>
+      <p><strong>Rating:</strong> 4.8 ★★★★☆ (120 reviews)</p>
+      <p>Experience the future with 5G, 108MP camera, and all-day battery.</p>
+      <button class="btn" style="font-size:1.2rem; padding:1rem 2rem;" onclick="addToCart('Smartphone X', 299, 'images/phone.jpg')">Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 JumShop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

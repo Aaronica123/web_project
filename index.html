@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JumShop - Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h2>JumShop</h2>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">Menu</div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Big Sale – Up to 70% Off!</h1>
+      <p>Shop phones, laptops, fashion & more</p>
+      <a href="products.html" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="container">
+    <h2 style="text-align:center; margin:2rem 0;">Featured Deals</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <img src="images/phone.jpg" alt="Phone">
+        <div class="card-body">
+          <h3>Smartphone X</h3>
+          <p class="price">$299</p>
+          <button class="btn" onclick="addToCart('Smartphone X', 299, 'images/phone.jpg')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/laptop.jpg" alt="Laptop">
+        <div class="card-body">
+          <h3>Gaming Laptop Pro</h3>
+          <p class="price">$999</p>
+          <button class="btn" onclick="addToCart('Gaming Laptop Pro', 999, 'images/laptop.jpg')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/shoes.jpg" alt="Shoes">
+        <div class="card-body">
+          <h3>Trendy Sneakers</h3>
+          <p class="price">$79</p>
+          <button class="btn" onclick="addToCart('Trendy Sneakers', 79, 'images/shoes.jpg')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 JumShop. All rights reserved.</p>
+      <p>Built with HTML5, CSS3 & Vanilla JS</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
